@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">HeadFirst</string>
     <string name="main_head_first">Head First 设计模式 例子</string>
+    <string name="strategy">策略模式</string>
+    <string name="observer">观察者模式</string>
+    <string name="decorator">装饰者模式</string>
 </resources>

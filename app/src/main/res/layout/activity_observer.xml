@@ -10,28 +10,26 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.example.headfirst.MainActivity">
+        tools:context="com.example.headfirst.observer.ActivityObserver">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/main_head_first" />
+            android:text="概述：\n\t\t定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都会收到通知并自动更新" />
+
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/strategy" />
+            android:onClick="toCustomObserver"
+            android:text="自定义observer" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/observer"
-            android:onClick="observerExample"/>
+            android:text="系统observer" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/decorator" />
 
     </LinearLayout>
+
 </layout>
