@@ -1,4 +1,4 @@
-package com.example.headfirst.observer.role;
+package com.example.headfirst.observer.custom;
 
 /**
  */

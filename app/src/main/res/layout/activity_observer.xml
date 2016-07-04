@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+    <data>
+
+        <variable
+            name="dataA"
+            type="java.lang.String" />
+
+        <variable
+            name="dataB"
+            type="java.lang.String" />
+
+    </data>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -18,17 +30,54 @@
             android:text="概述：\n\t\t定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都会收到通知并自动更新" />
 
 
-        <Button
+        <RadioGroup
+            android:id="@+id/rg_way"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="toCustomObserver"
-            android:text="自定义observer" />
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_self"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="自定义" />
+
+            <RadioButton
+                android:id="@+id/rb_system"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="java.lang" />
+
+        </RadioGroup>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="系统observer" />
+            android:onClick="changeData"
+            android:text="改变数据" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="observer A"
+                android:text="@{dataA}" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="observer B"
+                android:text="@{dataB}" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
